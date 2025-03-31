@@ -1,12 +1,11 @@
 return {
-  -- add symbols-outline
+  -- Add PHP LSP (intelephense)
   {
-    "simrat39/symbols-outline.nvim",
-    cmd = "SymbolsOutline",
-    keys = { { "<leader>cs", "<cmd>SymbolsOutline<cr>", desc = "Symbols Outline" } },
+    "neovim/nvim-lspconfig",
     opts = {
-      -- add your options that should be passed to the setup() function here
-      position = "right",
+      servers = {
+        phpactor = {}, -- Enable PHP LSP
+      },
     },
   },
 }
